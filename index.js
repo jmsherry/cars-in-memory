@@ -42,9 +42,9 @@ app.put('/api/cars/:id', function(req, res){
   };
 
   cars = [
-    ...cars.splice(0, oldCarIndex),
+    ...cars.slice(0, oldCarIndex),
     updatedCar,
-    ...cars.splice(oldCarIndex + 1)
+    ...cars.slice(oldCarIndex + 1)
   ];
 
   res.sendStatus(200);
